@@ -1,0 +1,19 @@
+{
+  "_comment": "麦当劳情绪食鉴官 · MCP 配置示例（已脱敏，仅含环境变量占位符）",
+  "_usage": "将 mcpServers 下的 mcd-mcp 条目合并到你的 MCP 配置文件（如 ~/.workbuddy/mcp.json），并把占位符替换为真实环境变量。所有敏感信息一律通过环境变量注入，不得硬编码。",
+  "_env_vars_required": [
+    "MCD_MCP_URL",
+    "MCD_MCP_AUTH_TOKEN"
+  ],
+  "mcpServers": {
+    "mcd-mcp": {
+      "url": "${MCD_MCP_URL}",
+      "headers": {
+        "Authorization": "Bearer ${MCD_MCP_AUTH_TOKEN}",
+        "X-Client-Id": "${MCD_MCP_CLIENT_ID}"
+      },
+      "timeout": 30000,
+      "enabled": true
+    }
+  }
+}

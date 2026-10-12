@@ -1,0 +1,30 @@
+# 用户真实订单数据，绝不入库
+mcd_data/
+*.log
+
+# 演示数据（若单独拆出）
+sample_orders/
+
+# 环境变量与凭据
+.env
+.env.*
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.mypy_cache/
+.pytest_cache/
+
+# 编辑器与系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 报告输出
+reports/
+*.tmp
